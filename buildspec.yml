@@ -14,7 +14,7 @@ phases:
     COMMANDS:
         - docker push $API_REPOSITORY_URI:$CODEBUILD_BUILD_NUMBER
         - docker push $API_REPOSITORY_URI:latest      
-        - echo Build completed on `date`
+        - echo Build completed on 'date'
         
         
  
