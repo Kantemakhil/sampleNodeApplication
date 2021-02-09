@@ -12,8 +12,9 @@ phases:
         - docker build -t $API_REPOSITORY_URI:$CODEBUILD_BUILD_NUMBER --tag $API_REPOSITORY_URI:latest .
     post_build:
       commands:
+        - echo Pushing the Docker Sample NodeJs
         - docker push $API_REPOSITORY_URI:$CODEBUILD_BUILD_NUMBER
-        - docker push $API_REPOSITORY_URI:latest      
+        - docker push $API_REPOSITORY_URI:latest
         - echo Build completed on 'date'
         
         
